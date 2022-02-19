@@ -21,4 +21,8 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  public logout(): void {
+    this.authService.logout();
+  }
 }

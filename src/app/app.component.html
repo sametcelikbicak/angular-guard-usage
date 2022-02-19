@@ -68,6 +68,14 @@
     >
       <span>Login</span>
     </button>
+
+    <button
+      *ngIf="authService.isLoggedIn"
+      class="card card-small"
+      (click)="logout()"
+    >
+      <span>Logout</span>
+    </button>
   </div>
 </div>
 
