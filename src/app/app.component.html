@@ -53,16 +53,28 @@
   </div>
 
   <div class="card-container">
-    <button class="card card-small">
-      <span>Login</span>
-    </button>
-
-    <button class="card card-small">
+    <button
+      class="card card-small"
+      routerLink=""
+      (click)="changeActivePage('Home')"
+    >
       <span>Home</span>
     </button>
 
-    <button class="card card-small">
+    <button
+      class="card card-small"
+      routerLink="profile"
+      (click)="changeActivePage('Profile')"
+    >
       <span>Profile</span>
+    </button>
+
+    <button
+      class="card card-small"
+      routerLink="login"
+      (click)="changeActivePage('Login')"
+    >
+      <span>Login</span>
     </button>
   </div>
 </div>
