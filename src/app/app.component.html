@@ -49,30 +49,22 @@
       </g>
     </svg>
 
-    <span>{{ activePage }}</span>
+    <span class="active-page">{{ activePage }}</span>
   </div>
 
   <div class="card-container">
-    <button
-      class="card card-small"
-      routerLink=""
-      (click)="changeActivePage('Home')"
-    >
+    <button class="card card-small" routerLink="">
       <span>Home</span>
     </button>
 
-    <button
-      class="card card-small"
-      routerLink="profile"
-      (click)="changeActivePage('Profile')"
-    >
+    <button class="card card-small" routerLink="profile">
       <span>Profile</span>
     </button>
 
     <button
+      *ngIf="!authService.isLoggedIn"
       class="card card-small"
       routerLink="login"
-      (click)="changeActivePage('Login')"
     >
       <span>Login</span>
     </button>

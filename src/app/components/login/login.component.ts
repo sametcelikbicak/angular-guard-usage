@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { delay } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -6,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  public loginContent: string = '';
 
-  public ngOnInit(): void {}
+  constructor(private authService: AuthService, private router: Router) {}
+
+  public ngOnInit(): void {
+    this.loginContent = 'Logging in...';
+
+    setTimeout(() => {
+      this.authService.login();
+      this.loginContent = '';
+      this.router.navigate(['.']);
+    }, 700);
+  }
 }
