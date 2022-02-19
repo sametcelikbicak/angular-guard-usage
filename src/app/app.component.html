@@ -63,7 +63,7 @@
 
     <button
       *ngIf="!authService.isLoggedIn"
-      class="card card-small"
+      class="card card-small login"
       routerLink="login"
     >
       <span>Login</span>
@@ -71,7 +71,7 @@
 
     <button
       *ngIf="authService.isLoggedIn"
-      class="card card-small"
+      class="card card-small logout"
       (click)="logout()"
     >
       <span>Logout</span>
