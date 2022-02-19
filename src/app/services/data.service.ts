@@ -11,4 +11,8 @@ export class DataService {
   public saveChanges(): void {
     this._isSavedChanges = true;
   }
+
+  public rollbackChanges(): void {
+    this._isSavedChanges = false;
+  }
 }
