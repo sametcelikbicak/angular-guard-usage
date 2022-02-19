@@ -1,4 +1,32 @@
-# AngularGuardUsage
+# Angular Guard Usage
+
+
+### Application Tree
+```
+src
+├── app
+│   ├── app-routing.module.ts
+│   ├── app.component.html
+│   ├── app.component.scss
+│   ├── app.component.ts
+│   ├── app.module.ts
+│   ├── components
+│   │   ├── login
+│   │   │   ├── login.component.html
+│   │   │   ├── login.component.scss
+│   │   │   └── login.component.ts
+│   │   └── profile
+│   │       ├── profile.component.html
+│   │       ├── profile.component.scss
+│   │       └── profile.component.ts
+│   ├── guards
+│   │   ├── can-activate.guard.ts
+│   │   └── can-deactivate-profile.guard.ts
+│   └── services
+│       ├── auth.service.ts
+│       └── data.service.ts
+│
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
